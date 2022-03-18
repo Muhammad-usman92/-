@@ -13,6 +13,7 @@ class Database {
 					{
 						host: "server95.hndservers.net",
 						dialect: "mysql",
+						logging:true
 					}
 				);
 				this.connection = temp;
