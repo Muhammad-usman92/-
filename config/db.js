@@ -7,11 +7,11 @@ class Database {
 		if (!this.connection) {
 			try {
 				const temp = new Sequelize(
-					"sys",
-					"root" ,
+					"dawood_check",
+					"dawood_data" ,
 					"Az_qa_03",
 					{
-						host: "127.0.0.1",
+						host: "server95.hndservers.net",
 						dialect: "mysql",
 					}
 				);
