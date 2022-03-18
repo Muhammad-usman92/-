@@ -10,9 +10,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-// app.use('/',(req,res)=>{
-// 	res.send("hello world")
-// })
+app.use('/',(req,res)=>{
+	res.send("hello world")
+})
 app.use("/api/v1", routes);
 app.use("/api/v1",router)
 
