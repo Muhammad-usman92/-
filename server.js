@@ -10,13 +10,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/',(req,res)=>{
-	res.send("hello world")
-})
 app.use("/api/v1", routes);
 app.use("/api/v1",router)
 
-const PORT =  8080|| 8082;
+const PORT =  8080;
 
 app.listen(PORT, async () => {
 	await connection.authenticate();
