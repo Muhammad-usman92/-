@@ -11,7 +11,7 @@ class Database {
 					"dawood_data" ,
 					"Az_qa_03",
 					{
-						host: "server95.hndservers.net",
+						host: "167.114.30.172",
 						dialect: "mysql",
 						logging:true
 					}
