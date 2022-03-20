@@ -17,7 +17,7 @@ const PORT =  8080;
 
 app.listen(PORT, async () => {
 	await connection.authenticate();
-	connection.sync({ alter: true });
+	// connection.sync({ alter: false });
 	console.log("listening on PORT: " + PORT);
 	// console.log("hello world")
 });
