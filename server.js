@@ -15,7 +15,7 @@ app.use("/api/v1",router)
 
 const PORT =  8080;
 
-app.listen(PORT, async () => {
+app.listen(process.env.PORT || PORT, async () => {
 	await connection.authenticate();
 	// connection.sync({ alter: false });
 	console.log("listening on PORT: " + PORT);
