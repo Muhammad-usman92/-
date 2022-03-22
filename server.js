@@ -17,10 +17,11 @@ const PORT =  8080;
 
 app.listen(process.env.PORT || PORT, async () => {
 	await connection.authenticate();
-	connection.sync({ alter: true })
-	.then(()=>{
+	// connection.sync({ alter: true })
+	// .then((data)=>{
 
-		console.log("listening on PORT: " + PORT);
-	})
+	// 	console.log("listening on PORT: " + PORT);
+	// 	console.log(data)
+	// })
 	console.log("hello world")
 });
