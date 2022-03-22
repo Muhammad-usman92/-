@@ -5,7 +5,8 @@ const OrderItemControllar=require("../controllers/OrderItemControllar")
 
 const router = express.Router();
 
-router.route("/").get(OrderController.onGetAll).post(OrderController.onCreate);
+router.route("/").get(OrderController.onGetAll);
+router .route("/post").post(OrderController.onCreate);
 router.route("/:id").get(OrderController.onGetById);
 router.route("/id/:orderId").get(ShippingAddress.onGetCategoryId);
 router.route("/orderItem/:orderId").get(OrderItemControllar.onGetCategoryId);
