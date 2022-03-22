@@ -29,7 +29,7 @@ class OrderController {
 				await OrderedItems.create({
 					productId: tempData.items[i].id,
 					orderId: createdOrder.id,
-					quantity:tempData.items[i].quantity,
+					// quantity:tempData.items[i].quantity,
 					price:tempData.items[i].price,
 					title:tempData.items[i].title,
 					itemTotal:tempData.items[i].itemTotal,
