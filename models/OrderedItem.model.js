@@ -6,9 +6,9 @@ const OrderedItem = connection.define("OrderedItem", {
 	productId: {
 		type: Sequelize.INTEGER,
 	},
-	// quantity:{
-	// 	type:Sequelize.INTEGER
-	// },
+	quantity:{
+		type:Sequelize.INTEGER
+	},
 	price:{
 		type:Sequelize.INTEGER,
 	},
