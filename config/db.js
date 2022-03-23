@@ -7,11 +7,11 @@ class Database {
 		if (!this.connection) {
 			try {
 				const temp = new Sequelize(
-					"sys",
-					"root" ,
-					"Az_qa_03",
+					"heroku_daeffbb09083934",
+					"b1eb803eec620d" ,
+					"71502629",
 					{
-						host: "127.0.0.1",
+						host: "us-cdbr-east-05.cleardb.net",
 						dialect: "mysql",
 						logging:true
 					}
