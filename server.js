@@ -25,3 +25,8 @@ app.listen(process.env.PORT || PORT, async () => {
 	// })
 	console.log("hello world")
 });
+process.on("unhandledRejection",err=>{
+	console.log(`ERROR: ${err.message}`);
+	
+
+})
