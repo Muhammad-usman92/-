@@ -36,7 +36,7 @@ const Product = connection.define("product", {
 		type: Sequelize.DATE,
 		defaultValue: Sequelize.literal('NOW()')
 	  },
-	  imgurl:{
+	  imgUrl:{
 		  type:Sequelize.STRING,
 		  default:null,
 	  }
