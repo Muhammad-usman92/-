@@ -7,9 +7,9 @@ class Database {
 		if (!this.connection) {
 			try {
 				const temp = new Sequelize(
-					"heroku_daeffbb09083934",
-					"b1eb803eec620d" ,
-					"71502629",
+					"heroku_6ebe1a057a88886",
+					"b8d3d65ff6a1f7" ,
+					"706cce50",
 					{
 						host: "us-cdbr-east-05.cleardb.net",
 						dialect: "mysql",
