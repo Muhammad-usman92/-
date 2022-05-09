@@ -8,7 +8,7 @@ router.route("/")
 	.get(ProductController.onGetAll);
 router.route("/post")
 	.post(ProductController.onCreate);
-	
+	router.route('/updateProductPrice').get(ProductController.onupdateProductPrice)
 router.route("/:id").get(ProductController.onGetById);
 router.route("/id/:CategoryId").get(ProductController.onGetCategoryId);
 router.route('/delete/:id').delete(productController.ondelete)

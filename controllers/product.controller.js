@@ -37,6 +37,10 @@ onGetCategoryId=async (req,res) => {
 			data: product,
 		});
 	};
+	// onupdateProductPrice=async(req,res)=>{
+	// 	const data  = await fetch('https://live.dawoodonline.pk/services.asmx/PriceChange')
+	// 	console.log(data)
+	// }
 	ondelete= async (req, res) => {
 		const product = await ProductService.delete(req.params.id);
 
