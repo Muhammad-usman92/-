@@ -20,6 +20,14 @@ class OrderController {
 			data: order,
 		});
 	};
+	ondelete= async (req, res) => {
+		const order = await OrderService.delete(req.params.id);
+
+		res.status(200).json({
+			success: true,
+			data: order,
+		});
+	};
 	onCreate = async (req, res, next) => {
 		const tempData = req.body;
 		const shippingAddress = tempData.shippingAddress;

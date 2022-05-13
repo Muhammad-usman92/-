@@ -5,7 +5,8 @@ class OrderService {
 	getById = async (id) => await Order.findOne({ where: { id } });
 	create = async (data) => await Order.create(data);
 	update = () => {};
-	delete = () => {};
+	delete = async (id) =>await Order.destroy({where:{id}}) ;
+
 }
 
 module.exports = new OrderService();
