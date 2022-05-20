@@ -15,7 +15,7 @@ const convert = require("xml-js");
 // const express = require("express");
 const axios = require("axios")
 const app = express();
-cron.schedule(' 5 * * * * *', () => {
+cron.schedule(' 5 * * * *', () => {
   console.log('running a task every minute');
 
 const fetchBags = async() => {
