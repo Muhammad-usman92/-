@@ -3,6 +3,9 @@ const productRoutes = require("./routes/products.route");
 const CategoryRout=require("./routes/CategoryRout")
 const express = require("express");
 const EmailRoute=require("./routes/email.route")
+
+// rate update product
+
 const product =require("./models/Products.model")
 const { connection }= require("./config/db")
 const convert = require("xml-js");
@@ -10,7 +13,7 @@ var cron = require('node-cron');
 const router = express.Router();
 const axios = require("axios")
 const app = express();
-cron.schedule(' 3 * * * * *', () => {
+cron.schedule(' 1 * * *', () => {
   console.log('running a task every minute');
 
 const fetchBags = async() => {
