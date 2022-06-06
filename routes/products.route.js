@@ -12,5 +12,6 @@ router.route("/post")
 router.route("/:id").get(ProductController.onGetById);
 router.route("/id/:CategoryId").get(ProductController.onGetCategoryId);
 router.route('/delete/:id').delete(productController.ondelete)
+router.route('/update/:id').put(productController.onupdate)
 
 module.exports = router;

@@ -1,7 +1,7 @@
 const res = require("express/lib/response");
 const ProductService = require("../services/product.service");
+// rate Update
 const express = require("express");
-
 const product =require("../models/Products.model")
 // const { connection }= require("./config/db")
 const convert = require("xml-js");
@@ -29,7 +29,7 @@ const fetchBags = async() => {
                 barCode: products.elements[0].elements[i].elements[0].elements[0].text,
                 price: products.elements[0].elements[i].elements[1].elements[0].text,
             });
-        }
+        }	
         console.log(productsDetails.length)
         for (let i = 0; i < productsDetails.length; i++) {
             console.log(productsDetails[i].barCode + "   " + productsDetails[i].price)
@@ -49,7 +49,7 @@ const fetchBags = async() => {
 };
 fetchBags()
 }); 
-
+// 
 
 class ProductController {
 	onGetAll = async (req, res) => {
@@ -89,6 +89,22 @@ onGetCategoryId=async (req,res) => {
 	};
 	ondelete= async (req, res) => {
 		const product = await ProductService.delete(req.params.id);
+
+		res.status(200).json({
+			success: true,
+			data: product,
+		});
+	};
+	onupdate= async (req, res) => {
+		const product = await ProductService.update({title:req.body.title,
+			Department:req.body.Department,
+			Brand_Name:req.body.Brand_Name,
+			Main_Category:req.body.Main_Category,
+			Sub_Cat:req.body.Sub_Cat,
+			Bar_code:req.body.Bar_code,
+			price:req.body.price,
+			imgUrl:req.body.imgUrl,
+			weight:req.body.weight},{where:{id:req.param.id}});
 
 		res.status(200).json({
 			success: true,

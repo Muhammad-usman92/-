@@ -14,7 +14,9 @@ class ProductService {
 	getById = async (id) => await Product.findOne({ where: { id } });
 	GetCategoryId=async (CategoryId) => await Product.findAll({where:{CategoryId}}) 
 	create = async (data) => await Product.create(data);
-	update = () => {};
+	update = async (data,id) => await Product.update({
+	data
+	},{where:{id}}) ;
 	delete = async (id) =>await Product.destroy({where:{id}}) ;
 }
 
