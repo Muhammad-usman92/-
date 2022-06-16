@@ -41,6 +41,7 @@ class OrderController {
 					price:tempData.items[i].price,
 					title:tempData.items[i].title,
 					itemTotal:tempData.items[i].itemTotal,
+					imgUrl:tempData.items[i].imgUrl,
 				});
 			}
 			const createdShippingAddress = await ShippingAddress.create({

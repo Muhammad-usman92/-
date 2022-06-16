@@ -18,6 +18,10 @@ const OrderedItem = connection.define("OrderedItem", {
 	itemTotal:{
 		type:Sequelize.INTEGER,
 	},
+	imgUrl:{
+		type:Sequelize.STRING,
+		default:null,
+	},
 
 });
 
