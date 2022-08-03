@@ -3,7 +3,7 @@ const ProductService = require("../services/product.service");
 // rate Update
 const express = require("express");
 const product =require("../models/Products.model")
-// const { connection }= require("./config/db")
+
 const convert = require("xml-js");
 var cron = require('node-cron');
 const router = express.Router();
@@ -18,7 +18,7 @@ const fetchBags = async() => {
             `https://live.dawoodonline.pk/services.asmx/PriceChange`
         );
 
-        // console.log(data.data)
+        console.log(data.data)
 
         const products = convert.xml2js(data.data);
         console.log(JSON.stringify(products))
